@@ -6,7 +6,7 @@ const saveIdeasBtn = document.querySelector("#save-button");
 const ideasContainer = document.querySelector("#ideas-container");
 const ideaPlaceholder = document.querySelector(".no-ideas-placeholder");
 
-let ideas = JSON.parse(localStorage.getItem("ideasSaved")) || [];
+let ideas = JSON.parse(localStorage.getItem("savedIdeas")) || [];
 let ideaInstance = new Idea();
 
 if(ideas != []) {
@@ -42,6 +42,7 @@ function saveNewIdea() {
 function storeSavedIdea(id, title, body) {
   const newIdea = new Idea(Date.now(), titleInput.value, bodyInput.value);
   ideas.push(newIdea);
+  console.log(ideas)
   const stringifiedIdeas = JSON.stringify(newIdea);
   newIdea.saveToStorage(ideas);
 }
@@ -114,5 +115,5 @@ function onPageLoad() {
     item = new Idea(item.id, item.title, item.body);
     return item;
   });
-//   return newIdeas;
+  return newIdeas;
 }

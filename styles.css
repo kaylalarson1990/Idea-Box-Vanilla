@@ -105,6 +105,10 @@ header {
   cursor: pointer;
 }
 
+.wrap {
+    width: 25%;
+}
+
 .disabled {
   background-color: #65a2aa;
   cursor: not-allowed;
