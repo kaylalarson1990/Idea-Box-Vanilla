@@ -2,15 +2,19 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Idea Box Vanilla</title>
   </head>
   <body>
     <header>
       <h1 class="ideabox heading">
-        ideabox<span class="heading"> vanilla</span>
+        ideabox<span class="vanilla heading"> vanilla</span>
       </h1>
       <section class="top-section wrap">
         <form class="search">
@@ -18,6 +22,7 @@
             type="text"
             placeholder="Search"
             class="searchterm"
+            id="search-ideas"
             name="search"
           />
           <button type="submit" class="search-button">
@@ -26,6 +31,26 @@
         </form>
       </section>
     </header>
+    <section class="make-ideas-section">
+      <article class="form-article">
+        <figure class="form">
+          <form class="title">
+            <label class="title-text" for="title-text">Title:</label>
+            <input class="title-input" type="text" name="title-text" />
+          </form>
+          <form class="body">
+            <label class="body-text" for="body-text">Body:</label>
+            <textarea rows="10" columns="5" class="body-input" id="body-input" type="text" name="body-text">
+            </textarea>
+            <button type="button" class="save-button" id="save-button">Save</button>
+          </form>
+        </figure>
+      </article>
+    </section>
+    <section class="ideas-container" id="ideas-container">
+        <h2 class ="no-ideas-placeholder">No ideas yet? Start creating!</h2>
+	</section>
+    <script src="ideas.js"></script>
     <script src="main.js"></script>
   </body>
 </html>
